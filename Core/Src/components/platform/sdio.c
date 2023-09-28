@@ -56,7 +56,8 @@ static SDIO_CmdInitTypeDef sdio_cmd;
 static SDIO_DataInitTypeDef sdio_data;
 extern SemaphoreHandle_t sdio_recv_SemHandle;
 static SemaphoreHandle_t semahandle;
-
+SD_HandleTypeDef hsd;
+DMA_HandleTypeDef hdma_sdio;
 static uint8_t CalcClockDivider(uint32_t freq, uint32_t *preal) {
 	int divider;
 	uint32_t sdioclk;
